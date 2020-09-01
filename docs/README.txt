@@ -6,3 +6,6 @@ När ni kodar en funktion till projektet, beskriv den i readme filen eller nån 
 
 ja vet int ännu va vi ska göra så lite svårt å skriva en readme :DDDDD
 -felle
+
+dethär ser jätte bra ut
+-hermanbe

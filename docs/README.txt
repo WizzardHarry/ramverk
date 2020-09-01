@@ -12,3 +12,6 @@ dethär ser jätte bra ut
 
 Amazing
 -vahakanj
+
+NAJS!!
+-Jan

@@ -28,6 +28,6 @@ var app2 = new Vue({
   var vm = new Vue({
     el: '#app-4',
     data: {
-      email: 'felix@example.com'
+      email: 'Denna text skriven med vue.js'
     }
   })

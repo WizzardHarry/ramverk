@@ -6,6 +6,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
    
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> 
@@ -14,8 +16,20 @@
         <title>This is me trying out Vue</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./style.css">
+
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+
+
+
     </head>
+
+
 
 
 <h1 id="rubrik">Hejsan</h1>
@@ -39,19 +53,43 @@
     </span>
   </div>
 
-<script src="index.js"></script>
-
-<script>
 
 
 
-</script>
+
+
+
+
+
+
+
+
+
+
 
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
+
+<div id="application">
+    <div class="container">
+        <form class="mt-5">
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control form-control-lg">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>
+</div>
+
+
+
+
         <script src="" async defer></script>
+        <script src="index.js"></script>
     </body>
 </html>

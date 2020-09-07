@@ -15,3 +15,6 @@ Amazing
 
 NAJS!!
 -Jan
+
+Perfekt! 
+-Sofia

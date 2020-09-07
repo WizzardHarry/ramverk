@@ -53,21 +53,7 @@
     </span>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <body>
+ <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -78,11 +64,22 @@
         <form class="mt-5">
             <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" :value="email" class="form-control form-control-lg">
+            <!-- Vue.js använder v- som kallas Directive -->
+            <!-- Problemet med V-bind är att det är ONE WAY data bound -->
+            <!-- För TWO way data binding finns v-model direktiv -->
+            <!-- v-show är ett direktiv för display:none toggle -->
+            <!-- v-if är ett direktiv för att SKAPA eller FÖRSTÖRA -->
+            <!-- v-else är motstatdirektivet till v-if-->
+            <input type="email" v-if="visible" class="form-control form-control-lg">
+            <p v-else v-cloak>Tack för att du fyllt i formuläret</p>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" v-show="visible" class="btn btn-primary">Toggle show</button>
+       
         </form>
         
+       
+
     </div>
 </div>
 

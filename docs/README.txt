@@ -17,7 +17,7 @@ ja vet int ännu va vi ska göra så lite svårt å skriva en readme :DDDDD
 dethär ser jätte bra ut
 -hermanbe
 
-Amazing
+Amazing test
 -vahakanj
 
 NAJS!!

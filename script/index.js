@@ -28,6 +28,8 @@ var app2 = new Vue({
   var vm = new Vue({
     el: '#app-4',
     data: {
-      email: 'Denna text skriven med vue.js'
+      visible: true, // kolla vm.visible i konsolen
+      email: 'Denna text skriven med vue.js' // Kolla vm.email i konsolen 
+                                            // OBS! Endast one way bind. Använderen kan inte modifiera fältet från en input
     }
   })

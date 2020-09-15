@@ -4,13 +4,20 @@ Hit kommer information om projektet samt de delar som olika kontribuerar har dei
 
 När ni kodar en funktion till projektet, beskriv den i readme filen eller nån ny text fil som linkar till den funktionen / delen av projektet som ni kontribuerat till.
 
+Vi kommer att laga en application som är en commuter app. Var personen kan söka rutter, hitta snabbaste rutten och vilken sorts färdmedel är bäst och snabbast. 
+
+
+
+
+
+
 ja vet int ännu va vi ska göra så lite svårt å skriva en readme :DDDDD
 -felle
 
 dethär ser jätte bra ut
 -hermanbe
 
-Amazing
+Amazing test
 -vahakanj
 
 NAJS!!

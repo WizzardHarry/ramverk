@@ -25,3 +25,6 @@ NAJS!!
 
 Perfekt! 
 -Sofia
+
+Första PoC delen är uppe nu
+-Joel

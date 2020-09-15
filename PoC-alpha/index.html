@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="app">
+    <div class="container">
+        <div class="flex">
+            <div class="row">
+                <div class="col-8 location">
+                    <h2 class="lower">Wheather report at your location</h2>
+                </div>
+                <div class="col-4 degrees">
+                    <h2>21°<br>sunny</h2>
+                </div>
+                <div class="btn-1">
+                    <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-primary btn-lg btn1">
+                            <h1 class="click">Click here to<br>Start your<br>journey</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="flex">
+            <form class="mt-5"><br><br><br>
+                <div class="form-group">
+                    <label for="email"><h3>From:</h3></label>
+                    <input type="input" id="from" class="form-control form-control-lg">
+                    <label for="email"><h3>To:</h3></label>
+                    <input type="input" id="to" class="form-control form-control-lg">
+                </div>
+
+                <button class="btn btn-secondary btn-lg btn-block btn1">
+                    <h1>Go-&#62;</h1>
+                </button>
+                <button class="btn btn-secondary btn-lg btn-block btn2">
+                    <h1>&#60;-back</h1>
+                </button><br><br><br><br><br>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="flex"><br><br><br>
+            <h1 class="lower1">What type of route would you like?</h1><br><br>
+            <button type="button" class="btn btn-primary btn-lg btn-block btn1">
+                <h2> Fastest </h2>
+            </button><br><br>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block btn1">
+                <h2> Most convenient </h2>
+            </button><br><br>
+            
+            <button class="btn btn-secondary btn-lg btn-block btn2">
+                <h1>&#60;-back</h1>
+            </button><br><br><br><br>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-bottom: 3%;">
+        <div class="flex"><br><br>
+            <h1 Class="lower1">Your route is:</h1>
+            <div class="iframe">
+                <iframe 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=24.93942886590958%2C60.169588787253716%2C24.941247403621677%2C60.17128187292611&amp;layer=mapnik&amp;marker=60.17043534099665%2C24.940338134765625" 
+                    style="border: 1px solid black; width: 100ch; height: 100ch;">
+                </iframe><br>
+                <button class="btn btn-secondary btn-lg btn-block btn1">
+                    <h1>Finnish-&#62;</h1>
+                </button>
+                <button class="btn btn-secondary btn-lg btn-block btn2">
+                    <h1>&#60;-back</h1>
+                </button><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script>
+    var vm = new Vue({
+        el: '#app',
+        data: { 
+            email: 'mike@example.com',
+            visible: true
+        }
+        ,
+        methods: {
+            process: function () {
+                alert('Submitted ' + this.email);
+            }
+        }
+    });
+</script>-->
+ 
+  
+</script>
+
+
+</body>
+</html>

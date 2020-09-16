@@ -28,7 +28,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0
 
 
 
-/*
+
 var x = document.getElementById("demo");
 
 
@@ -62,4 +62,4 @@ var lon = position.coords.longitude.toFixed(0);
 
 }
 
-*/
+

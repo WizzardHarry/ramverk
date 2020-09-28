@@ -125,7 +125,9 @@ body {
     height: 100%;
 }
 
-
+#freeForm {
+  border-radius: 0.5em;
+}
 
  
   

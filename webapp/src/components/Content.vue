@@ -48,9 +48,9 @@
             <form class="mt-5"><br><br><br>
                 <div class="form-group">
                     <label for="email"><h3>From:</h3></label>
-                    <input type="input" id="from" class="form-control form-control-lg">
+                    <input type="input" v-model="from" id="from" class="form-control form-control-lg">
                     <label for="email"><h3>To:</h3></label>
-                    <input type="input" id="to" class="form-control form-control-lg">
+                    <input type="input" v-model="to" id="to" class="form-control form-control-lg">
                 </div>
 
                 <button v-on:click="box2 = false, box3 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
@@ -130,12 +130,12 @@
                         <label for="tourist">Tourist</label>
                     <br><br>
                         <h5>Travelling from</h5>
-                        <input type="text" id="tFrom" name="tFrom">
+                        <input type="text" id="tFrom" name="tFrom" class="form-control-lg">
                     <br>
                         <h5>Travelling to</h5>
-                        <input type="text" id="tTo" name="tTo"><br><br>
+                        <input type="text" id="tTo" name="tTo" class="form-control-lg"><br><br>
                     <h5>Your thoughts on what went well and where we could improve</h5>
-                    <textarea rows = "5" cols = "50" name = "freeForm">
+                    <textarea rows = "5" cols = "50" name = "freeForm" id="freeForm">
                     </textarea><br>
  
                         <input type="button" value="Submit form" class="btn btn-primary btn-lg btn3"> 
@@ -170,6 +170,9 @@ export default {
       box2: false,
       box3: false,
       box4: false,
+
+      from: 'Arcada',
+      to: 'Rautatieasema',
     }
   },
   methods: {

@@ -53,7 +53,7 @@
                     <input type="input" id="to" class="form-control form-control-lg">
                 </div>
 
-                <button v-on:click="box2 = false, box3 = true" type="button" class="btn btn-secondary btn-lg btn-block btn1">
+                <button v-on:click="box2 = false, box3 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
                     <h1>Go-&#62;</h1>
                 </button>
                 <button v-on:click="box2 = false, box1 = true" type="button" class="btn btn-secondary btn-lg btn-block btn2">
@@ -92,8 +92,8 @@
                     src="https://www.openstreetmap.org/export/embed.html?bbox=24.93942886590958%2C60.169588787253716%2C24.941247403621677%2C60.17128187292611&amp;layer=mapnik&amp;marker=60.17043534099665%2C24.940338134765625" 
                     style="border: 1px solid black; width: 100ch; height: 100ch;">
                 </iframe><br>
-                <button onClick="window.location.reload()" type="button" class="btn btn-secondary btn-lg btn-block btn1">
-                    <h1>Finnish-&#62;</h1>
+                <button v-on:click="box4 = false, box5 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
+                    <h1>Next-&#62;</h1>
                 </button>
                 <button v-on:click="box4 = false, box3 = true" type="button" class="btn btn-secondary btn-lg btn-block btn2">
                     <h1>&#60;-back</h1>
@@ -101,6 +101,56 @@
             </div>
         </div>
     </div>
+
+     <div class="container" v-if="box5">
+            <div class="flex"> 
+                <div class="row"><br>
+                    <div class="text">
+                        <h1>
+                            Customer statisfaction query
+                        </h1>
+                    
+
+                    <div class="andraRubrik">
+                            <h3>We would like you to participate in our short customer statisfaction query.
+                            It should only take a minute or so to complete 
+                            and by participating you can win one year of free travels with our services</h3>
+                    </div>
+
+                    <br>
+                    <form action="mailto:your@email.fi" method="GET">
+                    <h5>Occupation:</h5>
+                        <input type="radio" id="commuter" name="ocptn" value="commuter">
+                        <label for="commuter">Commuter</label><br>
+                        <input type="radio" id="elderly" name="ocptn" value="elderly">
+                        <label for="elderly">Elderly</label><br>
+                        <input type="radio" id="student" name="ocptn" value="student">
+                        <label for="student">Student</label><br>
+                        <input type="radio" id="tourist" name="ocptn" value="tourist">
+                        <label for="tourist">Tourist</label>
+                    <br><br>
+                        <h5>Travelling from</h5>
+                        <input type="text" id="tFrom" name="tFrom">
+                    <br>
+                        <h5>Travelling to</h5>
+                        <input type="text" id="tTo" name="tTo"><br><br>
+                    <h5>Your thoughts on what went well and where we could improve</h5>
+                    <textarea rows = "5" cols = "50" name = "freeForm">
+                    </textarea><br>
+ 
+                        <input type="button" value="Submit form" class="btn btn-primary btn-lg btn3"> 
+                        <input type="button" value="Skip" onClick="window.location.reload();" class="btn btn-secondary btn-lg btn4">
+
+  
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+
+
 </div>
 </template>
 

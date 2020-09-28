@@ -45,6 +45,37 @@ body {
     background-color: #50ADD3;
 }
 
+/* Form css */
+
+.rubrik {
+    padding-top: 10%;
+    padding-left: 10%;
+    position: relative;
+}
+.andraRubrik {    
+    padding-top: 1%;
+    position: relative;
+}
+
+.row {
+    top: 10px;
+    left: 20px;
+    position: relative;
+    bottom: 10px;
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.btn3 {
+    margin: 1% 0 0 0;
+}
+.btn4 {
+    margin: 1% 0 0 2%;
+}
+
+
+/* Form css end */
+
 .lower {
     border-bottom: solid;
     padding-left: 7%;

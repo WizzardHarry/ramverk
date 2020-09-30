@@ -33,11 +33,11 @@ var app2 = new Vue({
                                             // OBS! Endast one way bind. Använderen kan inte modifiera fältet från en input
     }
   })
-  
+
+  /*strt*/
   var sub = new Vue({
     el: "submitbutton",
     data: {
       message5: "test"
     }
-  })
-  
+  })/*end*/

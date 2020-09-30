@@ -148,6 +148,8 @@
             </div>
         </div> 
     </div>
+<!--tar nu automatiskt from och to från tidigare-->
+
 
 
 
@@ -219,13 +221,16 @@ export default {
       let year = d.getFullYear();
       return `${day} ${date} ${month} ${year}`;
     },
+
+    /* start*/
     submitfeedback: function(e){
         
         alert("Thank you for your feedback!");
         location.reload();
     
     },
-   
+   /*end*/
   }
+
 }
 </script>

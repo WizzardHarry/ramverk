@@ -1,7 +1,8 @@
 <template>
+
 <!-- Första lådan -->
   <div id="app">
-    <div class="container" v-if="box1">
+    <div class="container" v-show="box1">
         <div class="flex">
             <div class="row">
                 <div id="w-app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
@@ -31,7 +32,7 @@
                     </main>
                 </div>
                 <div class="btn-1">
-                    <div class="d-flex justify-content-around">
+                    <div class="d-flex justify-content-around">                        
                         <button v-on:click="box1 = false, box2 = true" type="button" class="btn btn-primary btn-lg btn1">
                             <h1 class="click">Click here to<br>Start your<br>journey</h1>
                         </button>
@@ -43,12 +44,13 @@
 
 <!-- Andra lådan -->
 
-    <div class="container" v-if="box2">
+    <div class="container" v-show="box2">
         <div class="flex">
             <form class="mt-5"><br><br><br>
                 <div class="form-group">
                     <label for="email"><h3>From:</h3></label>
-                    <input type="input" v-model="from" id="from" class="form-control form-control-lg">
+                    <!-- <input id="address" type="text"> -->
+                    <input type="input" v-model="from" id="address" class="form-control form-control-lg">
                     <label for="email"><h3>To:</h3></label>
                     <input type="input" v-model="to" id="to" class="form-control form-control-lg">
                 </div>
@@ -56,7 +58,7 @@
                 <button v-on:click="box2 = false, box3 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
                     <h1>Go-&#62;</h1>
                 </button>
-                <button v-on:click="box2 = false, box1 = true" type="button" class="btn btn-secondary btn-lg btn-block btn2">
+                <button v-on:click="box2 = false, box1 = true" type="button" class="btn btn-secondary btn-lg btn-block btn2">  
                     <h1>&#60;-back</h1>
                 </button><br><br><br><br><br>
             </form>
@@ -65,13 +67,13 @@
 
 <!-- Tredje lådan -->
 
-    <div class="container" v-if="box3">
+    <div class="container" v-show="box3">
         <div class="flex"><br><br><br>
             <h1 class="lower1">What type of route would you like?</h1><br><br>
             <button v-on:click="box3 = false, box4 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
                 <h2> Fastest </h2>
             </button><br><br>
-
+            
             <button v-on:click="box3 = false, box4 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
                 <h2> Most convenient </h2>
             </button><br><br>
@@ -84,25 +86,26 @@
 
 <!-- Fjärde lådan -->
 
-    <div class="container" style="margin-bottom: 3%;" v-if="box4">
+    <div class="container" style="margin-bottom: 3%;" v-show="box4">
         <div class="flex"><br><br>
             <h1 Class="lower1">Your route is:</h1>
-            <div class="iframe">
-                <iframe 
+            <!-- <div class="iframe"> -->
+            <!-- <b>Address:</b> -->
+            <div id="map" style="height:300px; width:700px; margin-top: 10px;"></div>
+               <!-- <iframe 
                     src="https://www.openstreetmap.org/export/embed.html?bbox=24.93942886590958%2C60.169588787253716%2C24.941247403621677%2C60.17128187292611&amp;layer=mapnik&amp;marker=60.17043534099665%2C24.940338134765625" 
                     style="border: 1px solid black; width: 100ch; height: 100ch;">
-                </iframe><br>
+                </iframe><br>-->
                 <button v-on:click="box4 = false, box5 = true" type="button" class="btn btn-primary btn-lg btn-block btn1">
                     <h1>Next-&#62;</h1>
                 </button>
                 <button v-on:click="box4 = false, box3 = true" type="button" class="btn btn-secondary btn-lg btn-block btn2">
                     <h1>&#60;-back</h1>
                 </button><br><br>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
-
-     <div class="container" v-if="box5">
+     <div class="container" v-show="box5">
             <div class="flex"> 
                 <div class="row"><br>
                     <div class="text">
@@ -118,9 +121,8 @@
                     </div>
 
                     <br>
-                    <!--<form action="mailto:throwawayforschool39gmail.com" method="GET">--><!-- losn: vuejs123!  --> <!-- ka ju ta bort action o method så behöver de int påriktigt skicka mail? Jan--> 
-                    <form>
-                    <h5>Occupation:</h5>                                                <!--o då behöver vi ingen backend heller-->
+                    <form action="mailto:your@email.fi" method="GET">
+                    <h5>Occupation:</h5>
                         <input type="radio" id="commuter" name="ocptn" value="commuter">
                         <label for="commuter">Commuter</label><br>
                         <input type="radio" id="elderly" name="ocptn" value="elderly">
@@ -131,21 +133,22 @@
                         <label for="tourist">Tourist</label>
                     <br><br>
                         <h5>Travelling from</h5>
-                        <input type="text" id="tFrom" name="tFrom" v-model="from" class="form-control-lg">
+                        <input type="text" id="tFrom" name="tFrom" class="form-control-lg">
                     <br>
                         <h5>Travelling to</h5>
-                        <input type="text" id="tTo" name="tTo" v-model="to" class="form-control-lg"><br><br>
+                        <input type="text" id="tTo" name="tTo" class="form-control-lg"><br><br>
                     <h5>Your thoughts on what went well and where we could improve</h5>
                     <textarea rows = "5" cols = "50" name = "freeForm" id="freeForm">
                     </textarea><br>
  
-                        <button id="submitbutton" class="btn btn-secondary btn-lg btn4" v-on:click="submitfeedback" >Submit</button>
+                        <input type="button" value="Submit form" class="btn btn-primary btn-lg btn3"> 
                         <input type="button" value="Skip" onClick="window.location.reload();" class="btn btn-secondary btn-lg btn4">
 
   
                     </form>
                 </div>
             </div>
+    
         </div> 
     </div>
 <!--tar nu automatiskt from och to från tidigare-->
@@ -157,8 +160,7 @@
 </div>
 </template>
 
-
-
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
 <script src="app.js"></script>
 <script>
 export default {
@@ -173,13 +175,27 @@ export default {
       box2: false,
       box3: false,
       box4: false,
+      box5: false,
 
       from: 'Arcada',
       to: 'Rautatieasema',
     }
+  
   },
+
+      mounted() {
+       let maps = document.createElement('script')
+       maps.setAttribute('src', 'map.js')
+       document.body.appendChild(maps)   
+        },
   
   methods: {
+
+    //    testy: function() {     
+    //   let maps = document.createElement('script')
+    //   maps.setAttribute('src', 'map.js')
+    //   document.head.appendChild(maps)   
+    //    },
 
 
     locatorButtonPressed() {
@@ -220,16 +236,7 @@ export default {
       let month = months[d.getMonth()];
       let year = d.getFullYear();
       return `${day} ${date} ${month} ${year}`;
-    },
-
-    /* start*/
-    submitfeedback: function(e){
-        
-        alert("Thank you for your feedback!");
-        location.reload();
-    
-    },
-   /*end*/
+    }
   }
 
 }

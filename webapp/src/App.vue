@@ -55,6 +55,8 @@ body {
 .andraRubrik {    
     padding-top: 1%;
     position: relative;
+    padding: 2%;
+    margin:auto;
 }
 
 .row {
@@ -103,7 +105,7 @@ body {
 
 .btn-1 {
     padding: 10% 0 15% 0;
-    min-width: 100%;
+    min-width: 95%;
     place-content: center;
 }
 

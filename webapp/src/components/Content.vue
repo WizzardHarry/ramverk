@@ -105,7 +105,9 @@
             <!-- </div> -->
         </div>
     </div>
-     <div class="container" v-show="box5">
+
+    
+     <div class="container" v-if="box5">
             <div class="flex"> 
                 <div class="row"><br>
                     <div class="text">
@@ -121,8 +123,9 @@
                     </div>
 
                     <br>
-                    <form action="mailto:your@email.fi" method="GET">
-                    <h5>Occupation:</h5>
+                    <!--<form action="mailto:throwawayforschool39gmail.com" method="GET">--><!-- losn: vuejs123!  --> <!-- ka ju ta bort action o method så behöver de int påriktigt skicka mail? Jan--> 
+                    <form>
+                    <h5>Occupation:</h5>                                                <!--o då behöver vi ingen backend heller-->
                         <input type="radio" id="commuter" name="ocptn" value="commuter">
                         <label for="commuter">Commuter</label><br>
                         <input type="radio" id="elderly" name="ocptn" value="elderly">
@@ -133,22 +136,21 @@
                         <label for="tourist">Tourist</label>
                     <br><br>
                         <h5>Travelling from</h5>
-                        <input type="text" id="tFrom" name="tFrom" class="form-control-lg">
+                        <input type="text" id="tFrom" name="tFrom" v-model="from" class="form-control-lg">
                     <br>
                         <h5>Travelling to</h5>
-                        <input type="text" id="tTo" name="tTo" class="form-control-lg"><br><br>
+                        <input type="text" id="tTo" name="tTo" v-model="to" class="form-control-lg"><br><br>
                     <h5>Your thoughts on what went well and where we could improve</h5>
                     <textarea rows = "5" cols = "50" name = "freeForm" id="freeForm">
                     </textarea><br>
  
-                        <input type="button" value="Submit form" class="btn btn-primary btn-lg btn3"> 
+                        <button id="submitbutton" class="btn btn-secondary btn-lg btn4" v-on:click="submitfeedback" >Submit</button>
                         <input type="button" value="Skip" onClick="window.location.reload();" class="btn btn-secondary btn-lg btn4">
 
   
                     </form>
                 </div>
             </div>
-    
         </div> 
     </div>
 <!--tar nu automatiskt from och to från tidigare-->
@@ -236,7 +238,16 @@ export default {
       let month = months[d.getMonth()];
       let year = d.getFullYear();
       return `${day} ${date} ${month} ${year}`;
-    }
+    },
+
+    /* start*/
+    submitfeedback: function(e){
+        
+        alert("Thank you for your feedback!");
+        location.reload();
+    },
+   /*end*/
+
   }
 
 }

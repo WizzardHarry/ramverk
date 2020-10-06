@@ -178,13 +178,11 @@ export default {
       box3: false,
       box4: false,
       box5: false,
-
       from: 'Arcada',
       to: 'Rautatieasema',
     }
   
   },
-
       mounted() {
        let maps = document.createElement('script')
        maps.setAttribute('src', 'map.js')
@@ -192,14 +190,11 @@ export default {
         },
   
   methods: {
-
     //    testy: function() {     
     //   let maps = document.createElement('script')
     //   maps.setAttribute('src', 'map.js')
     //   document.head.appendChild(maps)   
     //    },
-
-
     locatorButtonPressed() {
      navigator.geolocation.getCurrentPosition(
      position => {
@@ -207,7 +202,6 @@ export default {
        console.log(position.coords.longitude);
        var lat = position.coords.latitude.toFixed(0);
         var lon = position.coords.longitude.toFixed(0);
-
         fetch('https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid=03fdcab4998339b7fb8504d1efd0e89f')
             .then(res => {
                 return res.json();
@@ -239,7 +233,6 @@ export default {
       let year = d.getFullYear();
       return `${day} ${date} ${month} ${year}`;
     },
-
     /* start*/
     submitfeedback: function(e){
         
@@ -247,8 +240,6 @@ export default {
         location.reload();
     },
    /*end*/
-
   }
-
 }
 </script>
